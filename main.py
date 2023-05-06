@@ -35,11 +35,11 @@ def dd_to_dms(latitude: float, longitude: float) -> typing.Dict[str, typing.Any]
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", None, dest="folder",
+    parser.add_argument("-i", "--input", dest="folder",
                         action="store", required=True)
-    parser.add_argument(None, "--notime", dest="modify_timestamp",
+    parser.add_argument("-n", "--notime", dest="modify_timestamp",
                         action="store_false", default=True, required=False)
-    parser.add_argument(None, "--gps", dest="gps_dd",
+    parser.add_argument("-g", "--gps", dest="gps_dd",
                         action="store", default=None, required=False)
     args = parser.parse_args()
 
